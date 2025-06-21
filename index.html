@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>JS's Portfolio</title>
   <link rel="stylesheet" href="style.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-  <header>
+  <header data-aos="fade-down">
     <h1>JS</h1>
     <nav>
       <ul>
@@ -20,57 +22,74 @@
     </nav>
   </header>
 
-  <section id="about" class="section">
-    <h2>About Me</h2>
+  <section id="about" class="section" data-aos="fade-up">
+    <h2><i class="fas fa-user-circle"></i> About Me</h2>
     <p>
       I’m passionate about IoT, Android Development, and Machine Learning. I’ve developed multiple real-time applications like Leaf Disease Detection and Stress Monitoring Systems.
     </p>
   </section>
 
-  <section id="skills" class="section">
-    <h2>Skills</h2>
+  <section id="skills" class="section" data-aos="zoom-in">
+    <h2><i class="fas fa-laptop-code"></i> Skills</h2>
     <ul class="skills-list">
-      <li>Android (Java/Kotlin)</li>
-      <li>TensorFlow Lite</li>
-      <li>ESP32 & IoT Integration</li>
-      <li>Python, C++</li>
-      <li>HTML, CSS, JS</li>
+      <li data-aos="fade-right"><i class="fab fa-android"></i> Android (Java/Kotlin)</li>
+      <li data-aos="fade-right" data-aos-delay="100"><i class="fas fa-microchip"></i> TensorFlow Lite</li>
+      <li data-aos="fade-right" data-aos-delay="200"><i class="fas fa-wifi"></i> ESP32 & IoT Integration</li>
+      <li data-aos="fade-right" data-aos-delay="300"><i class="fas fa-code"></i> Python, C++</li>
+      <li data-aos="fade-right" data-aos-delay="400"><i class="fab fa-html5"></i> HTML, CSS, JS</li>
     </ul>
   </section>
 
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Leaf Disease Detection App</h3>
+  <section id="projects" class="section" data-aos="fade-up">
+    <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+    <div class="project" data-aos="fade-up" data-aos-delay="100">
+      <h3><i class="fas fa-leaf"></i> Leaf Disease Detection App</h3>
       <p>Developed a TFLite-powered Android app to detect plant leaf diseases using CNN.</p>
     </div>
-    <div class="project">
-      <h3>Stress Monitoring System for Autism</h3>
+    <div class="project" data-aos="fade-up" data-aos-delay="200">
+      <h3><i class="fas fa-heartbeat"></i> Stress Monitoring System for Autism</h3>
       <p>Created an IoT device with ECG sensors and ESP32 to monitor and manage stress in autistic individuals.</p>
     </div>
-    <div class="project">
-      <h3>Disaster Response Blimp</h3>
+    <div class="project" data-aos="fade-up" data-aos-delay="300">
+      <h3><i class="fas fa-plane-departure"></i> Disaster Response Blimp</h3>
       <p>Designed a helium-filled blimp prototype to deliver food and medicine in flood-affected areas.</p>
     </div>
   </section>
 
-  <section id="resume" class="section">
-    <h2>Resume</h2>
-    <p><a href="resume.pdf" download>Download My Resume</a></p>
-  </section>
+  <section id="resume" class="section" data-aos="fade-up">
+  <h2><i class="fas fa-file-alt"></i> Resume</h2>
+  <div class="resume-box">
+    <p>You can view or download my latest resume below:</p>
+    <div class="resume-actions">
+      <a href="resume.pdf" class="resume-btn" target="_blank" rel="noopener"><i class="fas fa-eye"></i> View Resume</a>
+      <a href="resume.pdf" class="resume-btn download" download><i class="fas fa-download"></i> Download Resume</a>
+    </div>
+  </div>
+</section>
 
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required/>
-      <input type="email" placeholder="Your Email" required/>
-      <textarea placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send</button>
+
+  <section id="contact" class="section" data-aos="fade-up">
+    <h2><i class="fas fa-envelope"></i> Contact</h2>
+    <form action="https://formsubmit.co/seshanj36@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required/>
+      <input type="email" name="email" placeholder="Your Email" required/>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+      <input type="hidden" name="_subject" value="New message from Portfolio!">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <button type="submit"><i class="fas fa-paper-plane"></i> Send</button>
     </form>
   </section>
 
-  <footer>
+  <footer data-aos="fade-up">
     <p>© 2025 JS | INDIA</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
 </body>
 </html>
